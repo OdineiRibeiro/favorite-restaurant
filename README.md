@@ -25,7 +25,7 @@ Refere-se a um blog simples com opção de comentários na página de cada posta
   rake db:setup
 ```
 
-- Após tudo configurado e banco de dadis migrado. No terminal, inicie o servidor rails com o comando abaixo
+- Após tudo configurado e banco de dados migrado. No terminal, inicie o servidor rails com o comando abaixo
 
 ```ruby
   rails server
