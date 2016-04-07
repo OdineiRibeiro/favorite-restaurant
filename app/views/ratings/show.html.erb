@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @rating.client.name %>
+</p>
+
+<p>
+  <strong>Restaurant:</strong>
+  <%= @rating.restaurant.name %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @rating.rate %>
+</p>
+
+<p>
+  <strong>Bill:</strong>
+  <%= @rating.bill %>
+</p>
+
+<%= new_comment @rating %>
+
+<%= link_to 'Edit', edit_rating_path(@rating) %> |
+<%= link_to 'Back', ratings_path %>

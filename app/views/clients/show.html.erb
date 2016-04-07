@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @client.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @client.age %>
+</p>
+
+<%= link_to "Nova qualificação", controller: "ratings", action: "new", client: @client %>
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

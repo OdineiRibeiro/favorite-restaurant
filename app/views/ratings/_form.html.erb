@@ -1,0 +1,43 @@
+<%= form_for(@rating) do |f| %>
+  <% if @rating.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@rating.errors.count, "error") %> prohibited this rating from being saved:</h2>
+
+      <ul>
+      <% @rating.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <% if @rating.client %>
+      <%= f.hidden_field 'client_id' %>
+      <p><%= "Qualificação feita em nome de " + @rating.client.name %></p>
+    <% else %>
+      <p><%= f.label :client_id %><br />
+      <%= f.collection_select(:client_id, @clients, :id, :name, include_blank: true) %></p>
+    <% end %>
+  </div>
+  <div class="field">
+    <% if @rating.restaurant %>
+      <%= f.hidden_field 'restaurant_id' %>
+      <p><%= "Qualificação feita para o restaurante " + @rating.restaurant.name %></p>
+    <% else %>
+      <p><%= f.label :restaurant_id %><br />
+      <%= f.collection_select(:restaurant_id, @restaurants, :id, :name, include_blank: true) %></p>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :rate %><br>
+    <%= f.text_field :rate %>
+  </div>
+  <div class="field">
+    <%= f.label :bill %><br>
+    <%= f.text_field :bill %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<h1>Exibindo Restaurante</h1>
+
+<strong>Nome: </strong><%= @restaurant.name %><br>
+<strong>Endereço: </strong><%= @restaurant.address %><br>
+<strong>Especialidade: </strong><%= @restaurant.speciality %><br>
+<strong>Sobre: </strong><%= @restaurant.about %><br>
+<hr>
+<strong>Nota média: </strong><%= @restaurant.ratings.average(:rate) %><br>
+<strong>Número de qualificações: </strong><%= @restaurant.ratings.count %><br>
+<strong>Preço médio: </strong><%= @restaurant.ratings.average(:bill) %><br>
+<hr>
+<%= comments @restaurant %>
+<%= new_comment @restaurant %>
+<hr>
+<%= link_to "Qualificar este restaurante", controller: "ratings", action: "new", restaurant: @restaurant %>
+<%= link_to 'Pagina inicial', action: 'index' %> -
+<%= link_to 'Editar', action: 'edit' %>

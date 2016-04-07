@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Especialidade</th>
+  </tr>
+  <% @restaurants.each do |restaurant| %>
+    <tr>
+      <td><%= restaurant.name %></td>
+      <td><%= restaurant.speciality %></td>
+      <td><%= link_to 'Ver mais', restaurant %> - </td>
+      <td><%= link_to 'Deletar', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+
+</table>
+<%= link_to 'Novo', action: 'new' %>
