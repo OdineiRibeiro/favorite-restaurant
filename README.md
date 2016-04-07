@@ -11,7 +11,7 @@ Refere-se a um blog simples com opção de comentários na página de cada posta
 - Clone o projeto:
 
 ```
-  git clone https://github.com/OdineiRibeiro/recipes-social-network.git
+  git clone https://github.com/OdineiRibeiro/favorite-restaurant.git
 ```
 
 - Abra o terminal na pasta criada e digite o comando abaixo para instalar as dependências do projeto
