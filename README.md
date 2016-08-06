@@ -34,3 +34,9 @@ Refere-se a um blog simples com opção de comentários na página de cada posta
 ## Mais informações
 
 Para mais informações entre em contato comigo através do [GitHub](https://github.com/OdineiRibeiro) ou através do email odinei.ribeiro@live.com!
+
+## Licença
+
+THE BEERWARE LICENSE (Revision 42)
+
+Odinei Ribeiro wrote this code. As long as you retain this notice you can do whatever you want with this stuff. If we meet some day, and you think this stuff is worth it, you can buy me a beer in return.
